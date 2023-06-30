@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+
+        </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Travel I&P Corp</title>
+        <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins",sans-serif;
+        }
+        .showcase{
+            position: absolute;
+            right: 0;
+            width: 100%;
+            padding: 100px;
+            display: flex;
+            min-height: 100vh;
+            justify-content: space-between;
+            align-items: center;
+            background: #111;
+            color: #fff;
+            z-index: 10;
+            transition: 0.8s;
+        }
+        .showcase.active{
+            right: 300px;
+
+        }
+        .showcase header{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width:100%;
+            
+            padding: 40px 100px;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+        .logo{
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        .toggle{
+            position: relative;
+            width: 60px;
+            height: 60px;
+            background: url('image9.png');
+            background-repeat: no-repeat;
+            background-size: 30px;
+            cursor: pointer;
+        }
+        
+
+        
+        .toggle.active{
+            background: url('image3.jpg');
+            background-repeat: no-repeat;
+            background-size: 35px;
+        }
+        .menu {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px;
+        }
+        .showcase video{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.4;
+        }
+        .text {
+            position: relative;
+            z-index: 50;
+        }
+        .vidbtn.active{
+          background-color: #111
+        }
+       
+        .overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        #text4 {
+            background: #fff;
+            padding: 10px ;
+            text-decoration: none; 
+             
+        }
+        @media(max-width:780px){
+        .showcase , .showcase header{
+            padding: 20px;
+        }
+        #text1{
+            font-size: 1.5em;
+        }
+        #text3{
+            font-size: 0.8em;
+        }
+        }
+        
+    
+
+        
+
+
+        </style>
+
+
+    </head>
+    <body>
+        <section class="showcase " id="comeb">
+
+            <header>
+                <h2 class="logo">Travel I&P Corp</h2>
+                <div class="toggle "></div>
+            
+            </header>
+            
+            <video src="travel.mp4" muted loop autoplay  width="1300px" height="800px" ></video>
+            <div class="overlay"></div>
+            <div class="text" >
+            <h2 id="text1">A journey of a thousand miles begins with one step.</h2>
+                        <p>Travel I&P Corporation is a travelling company agency <br>
+                        founded by Iuph and Palesa ,we as a company embrace the<br>
+                    desire and need for adventure and exploration and as such have our<br>
+                packages tailored to go beyond meeting such ideals.</p><br>
+                  <br>
+            <a id="text4" href="#">Get Started</a><br>
+            <br>
+            </div>
+           
+        </section>
+        <div  style="position: absolute;top: 0;right: 0;width: 300px;height: 100%;display:grid;align-items: center;justify-content: center;grid-template-columns:(2,1fr);" classs ="hovv">
+                <a  target="_blank"  style="margin-left: 10px;text-decoration: none;font-size: 20px;" href="https://649af26228b7f500897caf20--pair8.netlify.app/">Destination</a><br>
+                <a target="_blank"   style="margin-left: 10px;text-decoration: none;font-size: 20px;" href="https://649af2d262961b0085470195--pair8.netlify.app/">Scenery</a><br>
+                <a target="_blank"  style="margin-left: 10px;text-decoration: none;font-size: 20px;" href="https://649af33474bdba00a9dcbd57--pair8.netlify.app/">Our Services</a><br>
+                
+                
+            </div>
+            
+             
+        
+        
+        <script>
+            const menuToggle = document.querySelector('.toggle')
+            const showcase = document.querySelector('.showcase')
+            
+
+            menuToggle.addEventListener('click', () =>{
+                menuToggle.classList.toggle('active')
+                showcase.classList.toggle('active')
+            });
+
+           
+                
+            
+        </script>
+    </body>
+</html>
